@@ -21,7 +21,7 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "Addition",
+                        operation_type = "addition",
                         result = (x + y)
                     };
                     break;
@@ -29,7 +29,7 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "Subtraction",
+                        operation_type = "subtraction",
                         result = (x - y)
                     };
                     break;
@@ -37,7 +37,7 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "Multiplication",
+                        operation_type = "multiplication",
                         result = (x * y)
                     };
                     break;
@@ -66,10 +66,11 @@ namespace WebApplicationHng.Controllers
                 case "Addition":
                 case "addition":
                 case "add":
+                case "+":
                     result = new Models.Results() 
                     { 
                         slackUsername = "Sunday Mba",
-                        operation_type = "Addition",
+                        operation_type = "addition",
                         result = (cal.x + cal.y) 
                     };
                 break;
@@ -77,10 +78,11 @@ namespace WebApplicationHng.Controllers
                 case "Subtraction":
                 case "subtraction":
                 case "subtract":
+                case "-":
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "Subtraction",
+                        operation_type = "subtraction",
                         result = (cal.x - cal.y)
                     };
                 break;
@@ -88,6 +90,8 @@ namespace WebApplicationHng.Controllers
                 case "Multiplication":
                 case "multiply":
                 case "multiplication":
+                case "*":
+                case "x":
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
