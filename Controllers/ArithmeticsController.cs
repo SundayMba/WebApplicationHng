@@ -11,8 +11,8 @@ namespace WebApplicationHng.Controllers
         {
             Models.Results result = new Models.Results()
             {
-                name = "Sunday Mba",
-                Operation = "Not Defined",
+                slackUsername = "Sunday Mba",
+                operation_type = "Not Defined",
                 result = 0
             };
             switch (operation)
@@ -20,24 +20,24 @@ namespace WebApplicationHng.Controllers
                 case "add":
                     result = new Models.Results()
                     {
-                        name = "Sunday Mba",
-                        Operation = "Addition",
+                        slackUsername = "Sunday Mba",
+                        operation_type = "Addition",
                         result = (x + y)
                     };
                     break;
                 case "subtract":
                     result = new Models.Results()
                     {
-                        name = "Sunday Mba",
-                        Operation = "Subtraction",
+                        slackUsername = "Sunday Mba",
+                        operation_type = "Subtraction",
                         result = (x - y)
                     };
                     break;
                 case "multiply":
                     result = new Models.Results()
                     {
-                        name = "Sunday Mba",
-                        Operation = "Multiplication",
+                        slackUsername = "Sunday Mba",
+                        operation_type = "Multiplication",
                         result = (x * y)
                     };
                     break;
@@ -57,38 +57,41 @@ namespace WebApplicationHng.Controllers
         {
             Models.Results result = new Models.Results() 
             {
-                name = "Sunday Mba",
-                Operation = "Not Defined",
+                slackUsername = "Sunday Mba",
+                operation_type = "Not Defined",
                 result = 0
             };
             switch(cal.operation_type)
             {
                 case "Addition":
                 case "addition":
+                case "add":
                     result = new Models.Results() 
                     { 
-                      name = "Sunday Mba",
-                        Operation = "Addition",
+                        slackUsername = "Sunday Mba",
+                        operation_type = "Addition",
                         result = (cal.x + cal.y) 
                     };
                 break;
 
                 case "Subtraction":
                 case "subtraction":
+                case "subtract":
                     result = new Models.Results()
                     {
-                        name = "Sunday Mba",
-                        Operation = "Subtraction",
+                        slackUsername = "Sunday Mba",
+                        operation_type = "Subtraction",
                         result = (cal.x - cal.y)
                     };
                 break;
 
                 case "Multiplication":
+                case "multiply":
                 case "multiplication":
                     result = new Models.Results()
                     {
-                        name = "Sunday Mba",
-                        Operation = "multiplication",
+                        slackUsername = "Sunday Mba",
+                        operation_type = "multiplication",
                         result = (cal.x * cal.y)
                     };
                 break;
@@ -107,15 +110,15 @@ namespace WebApplicationHng.Controllers
                                 listInt.Add(sum);
                             }
 
-                            if (str2 == "add" || str2 == "addition" || str2 == "Addition")
+                            if (str2 == "add" || str2 == "addition" || str2 == "Addition" || str2 == "plus" || str2 == "+" || str2 == "join")
                             {
                                 temp = "add";
                             }
-                            else if (str2 == "subtract" || str2 == "Subtraction" || str2 == "subtraction" || str2 == "Subtract")
+                            else if (str2 == "subtract" || str2 == "Subtraction" || str2 == "subtraction" || str2 == "Subtract" || str2 == "-" || str2 == "minus" || str2 == "remove")
                             {
                                 temp = "subtract";
                             }
-                            else if (str2 == "multiply" || str2 == "Multiply" || str2 == "Multiplication" || str2 == "multiplication")
+                            else if (str2 == "multiply" || str2 == "Multiply" || str2 == "Multiplication" || str2 == "multiplication" || str2 == "*" || str2 == "x" || str2 == "times")
                             {
                                 temp = "multiply";
                             }
