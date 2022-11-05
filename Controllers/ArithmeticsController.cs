@@ -21,24 +21,27 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "addition",
-                        result = (x + y)
+                        result = (x + y),
+                        operation_type = "addition"
+                        
                     };
                     break;
                 case "subtract":
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "subtraction",
-                        result = (x - y)
+                        result = (x - y),
+                        operation_type = "subtraction"
+                        
                     };
                     break;
                 case "multiply":
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "multiplication",
-                        result = (x * y)
+                        result = (x * y),
+                        operation_type = "multiplication"
+                        
                     };
                     break;
             }
@@ -70,8 +73,9 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results() 
                     { 
                         slackUsername = "Sunday Mba",
-                        operation_type = "addition",
-                        result = (cal.x + cal.y) 
+                        result = (cal.x + cal.y),
+                        operation_type = "addition"
+                         
                     };
                 break;
 
@@ -82,8 +86,9 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "subtraction",
-                        result = (cal.x - cal.y)
+                        result = (cal.x - cal.y),
+                        operation_type = "subtraction"
+                        
                     };
                 break;
 
@@ -95,8 +100,9 @@ namespace WebApplicationHng.Controllers
                     result = new Models.Results()
                     {
                         slackUsername = "Sunday Mba",
-                        operation_type = "multiplication",
-                        result = (cal.x * cal.y)
+                        result = (cal.x * cal.y),
+                        operation_type = "multiplication"
+                        
                     };
                 break;
                 default:
@@ -135,7 +141,7 @@ namespace WebApplicationHng.Controllers
                                 result = Arithmetic("add", listInt[0], listInt[1]);
                                 break;
                             case "subtract":
-                                result = Arithmetic("subtract", listInt[1], listInt[0]);
+                                result = Arithmetic("subtract", listInt[0], listInt[1]);
                                 break;
                             case "multiply":
                                 result = Arithmetic("multiply", listInt[0], listInt[1]);
